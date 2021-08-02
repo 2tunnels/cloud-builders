@@ -3,8 +3,12 @@
 set -eu
 
 ROOT_DIR=$(pwd)
+IMAGES="python-3.6-slim-buster node-10.24-slim-buster"
 
-cd python-3.6-slim-buster/
-docker image build -t 2tunnels/cloud-builder-python-3.6-slim-buster .
-docker image push 2tunnels/cloud-builder-python-3.6-slim-buster
-cd "$ROOT_DIR"
+for IMAGE in $IMAGES
+do
+	cd "$IMAGE"
+    docker image build -t 2tunnels/cloud-builder-${IMAGE} .
+    docker image push 2tunnels/cloud-builder-${IMAGE}
+    cd "$ROOT_DIR"
+done
