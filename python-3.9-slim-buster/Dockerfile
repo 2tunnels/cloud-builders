@@ -1,4 +1,4 @@
-FROM python:3.6-slim-buster
+FROM python:3.9-slim-buster
 
 ENV PIP_VERSION=21.2.4
 ENV SETUPTOOLS_VERSION=57.5.0

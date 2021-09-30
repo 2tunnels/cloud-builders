@@ -4,7 +4,7 @@ set -eu
 
 ROOT_DIR=$(pwd)
 DATE=$(date +%Y.%m.%d)
-IMAGES="python-3.6-slim-buster node-10.24-slim-buster"
+IMAGES="python-3.6-slim-buster python-3.9-slim-buster node-10.24-slim-buster"
 
 for IMAGE in $IMAGES
 do

@@ -1,11 +1,11 @@
 FROM node:10.24-buster-slim
 
-ENV NPM_VERSION=7.20.3
-ENV YARN_VERSION=1.22.11
+ENV NPM_VERSION=7.24.1
+ENV YARN_VERSION=1.22.15
 ENV PHANTOMJS_PREBUILT_VERSION=2.1.16
 
 # Get latest Google Chrome version from: https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable
-ENV CHROME_VERSION=92.0.4515.107-1
+ENV CHROME_VERSION=94.0.4606.61-1
 
 # Install Google Chrome, PhantomJS and general CI dependencies
 RUN apt-get update -y && \
