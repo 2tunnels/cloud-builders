@@ -6,7 +6,16 @@ ENV POETRY_VERSION=1.1.11
 ENV DOCKER_COMPOSE_VERSION=1.29.2
 
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends curl git ssh make && \
+    apt-get install -y --no-install-recommends \
+        curl \
+        dnsutils \
+        git \
+        iputils-ping \
+        make \
+        postgresql-client \
+        procps \
+        ssh \
+        && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir --upgrade pip==$PIP_VERSION setuptools==$SETUPTOOLS_VERSION poetry==$POETRY_VERSION
